@@ -24,6 +24,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
+gem 'popper_js', '~> 1.16.0'
+
+
+gem 'tether-rails'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
