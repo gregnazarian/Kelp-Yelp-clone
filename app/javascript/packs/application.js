@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 require("@rails/ujs").start()
-//= require jquery
+//= require jquery3
 //= require jquery_ujs
 //= require turbolinks
 //= require popper

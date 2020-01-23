@@ -25,7 +25,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
 gem 'popper_js', '~> 1.16'
-
+gem 'sprockets-rails', '~> 3.2.1'
 
 gem 'tether-rails'
 
