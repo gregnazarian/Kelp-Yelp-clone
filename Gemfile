@@ -29,6 +29,8 @@ gem 'popper_js', '~> 1.16'
 
 gem 'tether-rails'
 
+gem 'will_paginate', '~> 3.1.6'
+gem 'will_paginate-bootstrap'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
