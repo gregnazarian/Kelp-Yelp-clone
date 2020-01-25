@@ -33,6 +33,7 @@ gem 'tether-rails'
 gem 'will_paginate', '~> 3.1.6'
 gem 'will_paginate-bootstrap'
 gem "font-awesome-rails"
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
