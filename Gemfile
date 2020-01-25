@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'simple_form'
 
 gem 'popper_js', '~> 1.16'
 gem 'sprockets-rails', '~> 3.2.1'
