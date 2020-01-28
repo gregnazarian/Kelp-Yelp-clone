@@ -34,7 +34,8 @@ gem 'will_paginate', '~> 3.1.6'
 gem 'will_paginate-bootstrap'
 gem "font-awesome-rails"
 gem 'devise'
-
+gem 'geocoder'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
