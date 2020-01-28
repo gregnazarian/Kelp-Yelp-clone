@@ -8,11 +8,13 @@
     <p><%= @place.description %></p>
 
   <div class="float-right">
-    <%= link_to 'Edit business details', edit_place_path(@place), class: 'btn btn-primary' %>
-    <%= link_to 'Delete your business', place_path(@place), 
-    method: :delete, 
-    data:{confirm: 'Are you sure you want to delete your business from Kelp?'},
-    class: 'btn btn-primary'
-    %>
+   <% if current_user && current_user == @place.user %>
+            <%= link_to 'Edit business details', edit_place_path(@place), class: 'btn btn-primary' %>
+            <%= link_to 'Delete your business', place_path(@place), 
+            method: :delete, 
+            data:{confirm: 'Are you sure you want to delete your business from Kelp?'},
+            class: 'btn btn-primary'
+            %>
+    <% end %>
   </div>
 </div>
