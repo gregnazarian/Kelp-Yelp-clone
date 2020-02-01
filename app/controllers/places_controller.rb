@@ -64,12 +64,12 @@ class PlacesController < ApplicationController
       redirect_to root_path
     end
 
-    # def new_release
-    #   respond_to do |format|
-    #     format.html
-    #     format.js
-    #   end
-    # end
+    def new_release
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    end
 
       private
 

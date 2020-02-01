@@ -6,4 +6,7 @@ Rails.application.routes.draw do
       resources :comments, only: :create
     end
 
+    get "kelp/new_release" => 'kelp#new_release', :as => :new_release
+
+
 end
