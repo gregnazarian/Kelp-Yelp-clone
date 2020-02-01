@@ -10,6 +10,7 @@ require("@rails/ujs").start()
 //= require popper
 //= require tether
 //= require bootstrap-sprockets
+//= require bootstrap-modal
 
 //= require_tree .
 

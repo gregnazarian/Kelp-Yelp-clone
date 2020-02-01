@@ -3,6 +3,13 @@ class PlacesController < ApplicationController
 
     def index
         @places = Place.all.paginate(page: params[:page], per_page: 3)
+          @search = params["search"]
+              if @search.present?
+                @name = @search["name"]
+                @places = Place.where("name ILIKE ?", "%#{@name}%").paginate(page: params[:page], per_page: 3)
+              end
+
+          return @places
     end
 
     def new
@@ -56,6 +63,13 @@ class PlacesController < ApplicationController
       @place.destroy
       redirect_to root_path
     end
+
+    # def new_release
+    #   respond_to do |format|
+    #     format.html
+    #     format.js
+    #   end
+    # end
 
       private
 

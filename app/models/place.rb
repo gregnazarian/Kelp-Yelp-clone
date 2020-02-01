@@ -10,4 +10,14 @@ class Place < ApplicationRecord
     validates :address, presence: true
     validates :description, presence: true
 
+
+    # def average_rating
+    #     ratings = self.comments
+    #   average = 0 
+    #   ratings.each do |rate|
+    #       average += rate.rating
+    #   end
+    #  average = average/ ratings.count   
+    # end
+
 end

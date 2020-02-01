@@ -1,5 +1,8 @@
 class Comment < ApplicationRecord
 
+    validates :message, presence: true
+    validates :rating, presence: true
+
     belongs_to :user
     belongs_to :place
 
@@ -15,5 +18,6 @@ class Comment < ApplicationRecord
         RATINGS.invert[self.rating]
     end
 
+    
 
 end
