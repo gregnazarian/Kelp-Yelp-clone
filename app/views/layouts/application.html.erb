@@ -24,7 +24,7 @@
 
 <div class="search-form">
 <%= simple_form_for :search, url: places_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :name, input_html: {value: ""} %>   
+  <%= f.input :name, label:'', input_html: {value: ""} %>   
   <%= f.submit "Search", class: "btn btn-primary" %>
 <% end %>
 </div>

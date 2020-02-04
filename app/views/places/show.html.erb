@@ -57,6 +57,8 @@
 
   <div class="col-10 offset-1">
       <h1 class="float-left">Reviews</h1>
+       
+       
       <div class="clear"></div>
             <div class="row">
                 <% @place.comments.each do |comment| %>
@@ -81,10 +83,13 @@
   <%= f.submit "Add a photo", class: 'btn btn-primary' %>
 <% end %>
 
-<% @place.photos.each do |photo| %>
-<%= photo.caption%>
 
-<%end%>
+<% if @place.photos.any? %>
+      <% @place.photos.each do |photo| %>
+        <%= image_tag photo.picture.url, class: 'class-name' %>
+        <%= photo.caption%>
+      <% end %>
+<% end %>
 
 
 </div>
