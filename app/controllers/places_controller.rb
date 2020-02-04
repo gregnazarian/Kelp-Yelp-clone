@@ -2,15 +2,16 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy, :update]
 
     def index
-        @places = Place.all.paginate(page: params[:page], per_page: 3)
+          @places = Place.all.paginate(page: params[:page], per_page: 3)
           @search = params["search"]
               if @search.present?
-                debugger
+
                 @description= @search["name"]
                 @name = @search["name"]
-                desc_places = Place.where("description ILIKE ?", "%#{@description}%")
-                name_places = Place.where("name ILIKE ?", "%#{@name}%")
-                @places = (desc_places + name_places).paginate(page: params[:page], per_page: 3)
+                # desc_places = Place.where("description ILIKE ?", "%#{@description}%")
+                # name_places = Place.where("name ILIKE ?", "%#{@name}%")
+                # @places = (desc_places + name_places).paginate(page: params[:page], per_page: 3)
+                @places = Place.where(name: @name).or(Place.where(description: @description)).paginate(page: params[:page], per_page: 3)
               end
 
           return @places
