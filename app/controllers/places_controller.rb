@@ -5,8 +5,12 @@ class PlacesController < ApplicationController
         @places = Place.all.paginate(page: params[:page], per_page: 3)
           @search = params["search"]
               if @search.present?
+                debugger
+                @description= @search["name"]
                 @name = @search["name"]
-                @places = Place.where("name ILIKE ?", "%#{@name}%").paginate(page: params[:page], per_page: 3)
+                desc_places = Place.where("description ILIKE ?", "%#{@description}%")
+                name_places = Place.where("name ILIKE ?", "%#{@name}%")
+                @places = (desc_places + name_places).paginate(page: params[:page], per_page: 3)
               end
 
           return @places
@@ -64,12 +68,6 @@ class PlacesController < ApplicationController
       redirect_to root_path
     end
 
-    def new_release
-      respond_to do |format|
-        format.html
-        format.js
-      end
-    end
 
       private
 
