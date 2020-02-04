@@ -11,7 +11,7 @@ class PlacesController < ApplicationController
                 # desc_places = Place.where("description ILIKE ?", "%#{@description}%")
                 # name_places = Place.where("name ILIKE ?", "%#{@name}%")
                 # @places = (desc_places + name_places).paginate(page: params[:page], per_page: 3)
-                @places = Place.where(name: @name).or(Place.where(description: @description)).paginate(page: params[:page], per_page: 3)
+                @places = Place.where("name ILIKE ?", "%#{@name}%").or(Place.where("description ILIKE ?", "%#{@description}%")).paginate(page: params[:page], per_page: 3)
               end
 
           return @places
