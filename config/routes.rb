@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     root 'places#index'
     resources :places do 
       resources :comments, only: :create
+      resources :photos, only: :create
     end
 
     get "kelp/new_release" => 'kelp#new_release', :as => :new_release
