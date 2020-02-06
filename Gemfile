@@ -39,6 +39,8 @@ gem 'geocoder'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'fog-aws'
+
 
 gem 'carrierwave', '~> 2.0'
 
