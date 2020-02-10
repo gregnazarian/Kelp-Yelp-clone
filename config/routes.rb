@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :photos, only: :create
     end
 
-    get "kelp/new_release" => 'kelp#new_release', :as => :new_release
+      resources :users, only: :show
 
 
 end
