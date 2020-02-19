@@ -69,3 +69,20 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+
+.carousel-inner img {
+  object-fit: cover !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  right: auto !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin: auto !important;
+}
+
+.carousel-inner .item {
+    height: 20em;
+    text-align: center;
+}
